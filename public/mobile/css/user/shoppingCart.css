@@ -1,0 +1,87 @@
+.cart_order{
+    position: fixed;
+    bottom: 55px;
+    z-index: 1000;
+}
+.cart_order a{
+    display: block;
+    float: right;
+    margin-left: 100px;
+    background-color: orange;
+    color: #FFFFFF;
+}
+.info{
+    width: 100%;
+
+}
+.number1{
+    float: right;
+    display: inline-block;
+}
+.price{
+    color: red;
+}
+.oldprice{
+    font-size: 10px;
+
+}
+
+
+
+.chima{
+    width: 100%;
+    border-top:1px solid #CCCCCC ;
+    border-bottom:1px solid #CCCCCC ;
+    height: 45px;
+    line-height: 45px;
+}
+.cm{
+    float: left;
+}
+.size{
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 10px;
+    border: 1px solid #c9c9c9;
+    float: left;
+    display: block;
+    margin-top: 10px;
+    margin-left: 2px;
+    text-align: center;
+}
+
+.now{
+   color: orange;
+}
+
+.number{
+    width: 100%;
+    border-top:1px solid #CCCCCC ;
+    border-bottom:1px solid #CCCCCC ;
+    height: 45px;
+
+}
+
+.jian{
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 10px;
+    border: 1px solid #c9c9c9;
+    margin-top: 10px;
+    margin-left: 2px;
+    text-align: center;
+    display: inline-block;
+}
+.num3{
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 10px;
+    border: 1px solid #c9c9c9;
+    /*float: left;*/
+    margin-top: 10px;
+    margin-left: 2px;
+    text-align: center;
+}
