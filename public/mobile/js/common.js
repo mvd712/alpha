@@ -1,52 +1,70 @@
-window.LT={};
 
+$(function () {
+    //初始化区域滚动
+    mui('.mui-scroll-wrapper').scroll({
+        indicators: false, //不显示滚动条
+    });
 
-//获取地址栏？后的ID信息
-// decodeuri为中文解码的方法
-LT.getParmas=function () {
-    var search=decodeURI(location.search);
-    if(search){
-        search=search.replace("?","");
-        var arr=search.split("&");
+    //操作轮播图
+    var gallery = mui('.mui-slider');
+    gallery.slider({
+        interval:1000//自动轮播周期，若为0则不自动播放，默认为0；
+    });
+    //操作选项卡
+    $(".mui-bar-tab a").click(function () {
+        $(this).removeClass("mui-active");
+        location.href = $(this).attr("href");
 
-        var parmas={};
-        arr.forEach(function (item,index) {
-            var newArr=item.split("=");
-            parmas[newArr[0]]=newArr[1];
-        })
-        return parmas;
-    }
-};
-
-// 将用户名和密码发送至后台然后跳转回当前页面的公共方法
-LT.loginAjax=function (obj) {
-    $.ajax({
-        url:obj.url||"#",
-        type:obj.type||"get",
-        data:obj.data||"",
-        dataType:obj.dataType||"json",
-        success:function (data) {
-            if(data.error===400){
-                location.href="/mobile/user/login.html?returnURL="+location.href;
-                return false;
-            }else {
-                obj.success && obj.success(data);
-            }
-
-        }
     })
+
+
+
+
+
+})
+
+
+var LT = {};
+LT.loginUrl = '/mobile/user/login.html';
+LT.indexUrl = "/mobile/user/index.html";
+LT.cartUrl = "/mobile/user/cart.html";
+//获取地址栏上的参数
+LT.getParams = function () {
+    var obj = {};
+    var search = decodeURI(location.search); // decodeURI() 解码
+    //?key=1&name=za
+    //判断有search
+    if(search){
+        search = search.replace("?", ""); //key=1&name=za
+        var searchArr = search.split("&"); //[ "key=1", "name=za"]
+        searchArr.forEach(function (item, i) {
+            var itemArr = item.split("=");
+            obj[itemArr[0]] = itemArr[1];
+        })
+    }
+    return obj;
 }
 
-// 分隔str字符串
-LT.strObj=function (str) {
-    var obj={};
-    if(str){
-        var arr=str.split("&");
-        arr.forEach(function (item,index) {
-            var newarr=item.split("=");
-            obj[newarr[0]]=newarr[1]
-
-        })
-        return obj;
-    }
+//需要登录的ajax
+//@params :   params  对象
+LT.loginAjax = function (params) {
+    $.ajax({
+        url: params.url || '#',
+        type: params.type || 'get',
+        data: params.data || '',
+        datatype: params.dataType || 'json',
+        success: function (data) {
+            //根据data.error值判断是否登陆
+            if(data.error === 400){
+                //未登录, 跳转到登录页, 拼接当前的地址, 为了登陆成功, 跳回来
+                location.href = LT.loginUrl + "?returnUrl=" + location.href;
+                return false;
+            }
+            //已登录状态 : 正常获取我的数据, 即接口成功的数据
+            params.success && params.success(data);
+        },
+        error: function () {
+            mui.toast("服务器繁忙")
+        }
+    })
 }

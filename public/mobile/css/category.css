@@ -1,16 +1,12 @@
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
-ul li{
+li{
     list-style: none;
 }
-
-.lt_content{
-    background-color: #c9c9c9;
-}
 .lt_content .cate_left{
-    width: 80px;
+    width: 90px;
     height: 100%;
     float: left;
     overflow: hidden;
@@ -19,13 +15,15 @@ ul li{
     width: 100%;
 }
 .lt_content .cate_left ul li{
-    width: 100%;
     height: 50px;
+    width: 100%;
     line-height: 50px;
-    background-color: #fff;
     text-align: center;
-    border-right: 1px solid #ccc;
+    background: #f3f4f5;
     border-bottom: 1px solid #ccc;
+    border-right:  1px solid #ccc;
+    border-top:  1px solid #ccc;
+
 }
 .lt_content .cate_left ul li a{
     display: block;
@@ -34,29 +32,41 @@ ul li{
 }
 .lt_content .cate_left ul li.now{
     border-right: none;
-    background-color: #c9c9c9;
+    border-bottom: none;
+    background: #fff;
+}
+.lt_content .cate_left ul li.now a{
+    color: orange;
 }
 
 /*二级分类*/
-.lt_content .cate_right{
+.cate_right{
     overflow: hidden;
     padding: 10px;
 }
-.lt_content .cate_right ul{
-    /*background-color: #fff;*/
+.cate_right ul{
     width: 100%;
 }
-.lt_content .cate_right ul li {
-float: left;
+.cate_right ul li{
+    float: left;
     width: 33.33%;
 }
-.lt_content .cate_right ul li a{
+.cate_right ul li a{
     display: block;
     text-align: center;
 }
-.lt_content .cate_right ul li a img{
-    width: 66px;
-
+.cate_right ul li a img{
+    width: 60px;
 }
+
+
+
+
+
+
+
+
+
+
 
 

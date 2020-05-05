@@ -1,120 +1,103 @@
-.shopck{
-    width: 100%;
-    margin: 4px;
-    overflow: hidden;
-}
 
 
-.shopck  a{
-    display: block;
-    float: left;
-    width: 33%;
-    height: 120px;
-}
-.shopck  a img{
-    width: 100%;
-    height: 100%;
-}
 
-.shoues{
-    width: 100%;
-    margin: 4px;
-    overflow: hidden;
-}
-.shoues-left{
-    width: 60%;
-    float: left;
-}
-img{
-    width: 100%;
-    height: 100%;
-}
-.shoues-left a{
-    display: block;
-    float: left;
-    width: 50%;
-    height: 120px;
-}
-/*.shoues-left a img{*/
-    /*width: 100%;*/
-    /*height: 100%;*/
-/*}*/
-.shoues-right{
-    width: 40%;
-    float: left;
-
-}
-.shoues-right a{
-    display: block;
-    float: left;
-    width:100%;
-    height: 240px;
-}
-/*.shoues-right a img{*/
-    /*width: 100%;*/
-    /*height: 100%;*/
-/*}*/
-
-.logpai{
-    width: 100%;
-    overflow: hidden;
-    height: 70px;
-}
-/*.logpai img{*/
-    /*width: 100%;*/
-    /*height: 100%;*/
-/*}*/
-
-.logbox{
-    overflow: hidden;
-    width: 100%;
-    margin: 4px;
-}
-.logbox a{
-    float: left;
-    width: 25%;
-    height: 100px;
-}
-
-.adishouse{
-    overflow: hidden;
-    width: 100%;
-    margin: 4px;
-}
-
-.adishop{
-    overflow: hidden;
-    width: 50%;
-    height: 300px;
-   float: left;
-    border: 2px solid #c9c9c9;
-    text-align: center;
-    display: block;
-}
-.imgbox{
+.cz_cate{
+    padding: 0 10px;
     margin-top: 10px;
-    width: 100%;
-    height: 150px;
 }
-.adishop span{
+.cz_cate a{
+    width: 33.3333%;
+    float: left;
+}
+.cz_cate a img{
     display: block;
-    text-align: center;
-    color: #c9c9c9;
-    font-size: 14px;
-    margin: 2px;
+    width: 100%;
 }
-.money{
+
+.cz_active{
+    border-top: 1px solid #ccc;
+    margin-top: 15px;
+    padding: 0 10px;
+}
+.cz_active a:nth-child(2n+1){
+    width: 67.1%;
+    float: left;
+}
+.cz_active a:nth-child(2n+1) img{
+    width: 50%;
+    float: left;
+}
+.cz_active a:nth-child(2){
+    width: 32.9%;
+    float: right;
+}
+.cz_active a:nth-child(2) img{
+    width: 100%;
+}
+
+.cz_brand{
+    padding: 0 10px;
+}
+.cz_brand > img{
+    width: 100%;
+}
+
+.cz_brand ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.cz_brand ul li{
+    width: 25%;
+    float: left;
+}
+.cz_brand ul li a{
+    display: block;
+}
+.cz_brand ul li a img{
+    width: 100%;
+}
+
+.cz_live{
+    padding: 0 10px;
+    margin-top: 10px;
+}
+.cz_live > img{
+    width: 100%;
+}
+.cz_product{
+    float: left;
+    width: 50%;
+    padding:0 5px;
+    margin-bottom: 10px;
+}
+.cz_product .box{
+    width: 100%;
+    box-shadow: 0 0 5px #ccc;
+    text-align: center;
+    padding: 10px 0;
+}
+.cz_product .box img{
+    width: 100%;
+}
+.cz_product .box .name{
+    padding: 0 10px;
+    height: 36px;
+    line-height: 18px;
     overflow: hidden;
-    text-align: center;
+}
+.cz_product .box .price{
+    font-size: 12px;
+    color: #f30;
+    margin-right: 10px;
+}
+.cz_product .box .oldPrice {
+    font-size: 12px;
+    color: #ccc;
+    text-decoration: line-through;
+}
+.cz_product .box .button{
+    background: #006699;
+    color: #fff;
 }
 
-.button{
-  /*display: block;*/
-    width: 120px;
-    height: 50px;
-    margin: 0 auto;
-    background-color: #006699;
-    text-align: center;
-    color: #FFFFFF;
-
-}
